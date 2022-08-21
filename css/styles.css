@@ -1,0 +1,101 @@
+:root {
+  --main-bg-color: rgb(240, 240, 240);
+  --card-bg-color: white;
+  --card-border: darkgray;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 20px;
+  background-color: var(--main-bg-color);
+  position: relative;
+}
+
+h1 {
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+/*------------------------------------------------------
+                    GRID CONTAINER
+------------------------------------------------------*/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+/*------------------------------------------------------
+                    CARD CONTAINER
+------------------------------------------------------*/
+.card {
+  display: flex;
+  border: 2px solid var(--card-border);
+  border-radius: 10px;
+  background-color: var(--card-bg-color);
+}
+/*------------------------------------------------------
+                    CARD IMAGE
+------------------------------------------------------*/
+.avatar {
+  width: 90px;
+  border-radius: 100%;
+  align-self: center;
+  margin: 20px 10px;
+}
+/*------------------------------------------------------
+                    TEXT IN CARD
+------------------------------------------------------*/
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.name {
+  font-size: 1rem;
+  padding: 10px 0px;
+}
+
+p {
+  opacity: 0.5;
+}
+/*------------------------------------------------------
+                   MODAL OVERLAY
+------------------------------------------------------*/
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.4);
+}
+
+.modal {
+  width: 375px;
+  margin: 15% auto auto;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #778;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
