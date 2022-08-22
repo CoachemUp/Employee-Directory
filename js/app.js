@@ -51,11 +51,11 @@ function displayModal(index) {
        <div class="text-container"> 
         <h2 class="name">${name.first} ${name.last}</h2> 
         <p class="email">${email}</p> 
-        <p class="address">${city}</p> 
+        <p class="city">${city}</p> 
         <hr /> 
         <p>${phone}</p> 
         <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p> 
-        <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p> 
+        <p>Birthday: ${((date.getMonth()) < 10 ? '0' : '')+ (date.getMonth()+1)}/${(date.getDate() < 10 ? '0' : '')+ (date.getDate())}/${(date.getFullYear())}</p> 
        </div> `;
 
     overlay.classList.remove("hidden");
